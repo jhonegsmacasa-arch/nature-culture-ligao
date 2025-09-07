@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Ligao City Tourism Design System - Natural & Cultural Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
+    /* Nature-inspired color palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 158 15% 15%;
+    
+    --primary: 158 64% 20%; /* Forest green */
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 158 50% 35%;
+    --primary-glow: 158 70% 45%;
+
+    --secondary: 200 60% 50%; /* Sky blue */
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 200 45% 65%;
+
+    --accent: 35 85% 55%; /* Warm earth */
+    --accent-foreground: 0 0% 98%;
+    --accent-light: 35 70% 70%;
+
+    --nature: 120 40% 25%; /* Deep forest */
+    --nature-foreground: 0 0% 98%;
+    --nature-light: 120 30% 45%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 158 15% 15%;
+    
+    --muted: 158 10% 96%;
+    --muted-foreground: 158 8% 45%;
+    
+    --border: 158 15% 90%;
+    --input: 158 15% 94%;
+    --ring: 158 64% 20%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 15% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Beautiful gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-nature: linear-gradient(120deg, hsl(var(--nature)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-sky: linear-gradient(180deg, hsl(var(--secondary-light)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-earth: linear-gradient(45deg, hsl(var(--accent)) 0%, hsl(var(--accent-light)) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px -2px hsla(var(--primary), 0.1);
+    --shadow-medium: 0 10px 40px -5px hsla(var(--primary), 0.15);
+    --shadow-strong: 0 20px 60px -10px hsla(var(--primary), 0.2);
+    --shadow-glow: 0 0 40px hsla(var(--primary-glow), 0.3);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +125,80 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-nature {
+    background: var(--gradient-nature);
+  }
+
+  .gradient-sky {
+    background: var(--gradient-sky);
+  }
+
+  .gradient-earth {
+    background: var(--gradient-earth);
+  }
+
+  .gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .attraction-card {
+    @apply bg-card rounded-lg overflow-hidden shadow-soft hover:shadow-medium transition-smooth;
+    @apply hover:scale-105 transform;
+  }
+
+  .attraction-card:hover {
+    @apply shadow-glow;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
