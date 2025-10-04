@@ -1,0 +1,18 @@
+IMAGE SOURCES & NOTES
+
+I found public/online images for some attractions (Wikimedia / local listings). Replace the placeholders with real photos below or your own images.
+
+Suggested steps to replace:
+1. Save your image files with the same filenames in /images (e.g., attr_1.jpg, attr_2.jpg).
+2. Update the <img src="images/attr_1.svg"> to .jpg/.png if needed.
+3. Re-open index.html.
+
+Sample places where public images may exist (search these on Google/Wikimedia):
+- "St. Stephen Protomartyr Church Ligao" (Wikimedia Commons)
+- "Divine Mercy Shrine Ligao" (local sites / Wikimedia)
+- "Ilah Nature Park Ligao" (villagepipol, lookph)
+- "Kawa-kawa Hill Ligao" (trip moments, local blogs)
+
+If you want, I can:
+- Automatically replace placeholders with the actual public image URLs I found,
+- or download and embed images directly into the ZIP (I can do that on request).

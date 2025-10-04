@@ -1,28 +1,226 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Ligao City Tourism - Discover Nature and Culture in Albay</title>
-    <meta name="description" content="Explore Ligao City's amazing attractions including St. Stephen Church, Kawa-kawa Hill, nature parks, and hidden springs. Your gateway to authentic Filipino culture and natural beauty in Albay Province." />
-    <meta name="author" content="Ligao City Tourism" />
-    <meta name="keywords" content="Ligao City, Albay tourism, Philippines travel, nature parks, cultural heritage, St. Stephen Church, Kawa-kawa Hill, adventure tourism, Filipino culture" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unveiling Ligao City — A Journey Through Nature & Culture</title>
+  <meta name="description" content="A modern minimalist guide to Ligao City: parks, hills, shrines and more." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">LC</div>
+        <div class="brand-text">
+          <h1>Unveiling Ligao City</h1>
+          <p class="subtitle">A Journey Through Nature & Culture</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#attractions">Attractions</a>
+        <a href="#map">Map</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <meta property="og:title" content="Ligao City Tourism - Discover Nature and Culture in Albay" />
-    <meta property="og:description" content="Explore Ligao City's amazing attractions including St. Stephen Church, Kawa-kawa Hill, nature parks, and hidden springs. Your gateway to authentic Filipino culture and natural beauty in Albay Province." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Discover Ligao City's highlights</h2>
+        <p class="lead">From serene shrines to rolling highlands — explore 13 curated spots. Click any card to view details and open the map.</p>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ligao City Tourism - Discover Nature and Culture" />
-    <meta name="twitter:description" content="Explore amazing attractions, nature parks, and cultural sites in Ligao City, Albay Province." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <div class="search-row">
+          <input id="filter" placeholder="Search attractions (e.g. 'hill', 'park', 'church')" />
+          <button id="clearBtn" class="btn">Clear</button>
+        </div>
+      </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      <aside class="hero-map">
+        <h3>Quick Map</h3>
+        <div id="map" class="map-embed">
+          <iframe title="Ligao City Map" src="https://www.google.com/maps?q=Ligao+City,+Albay&output=embed" loading="lazy"></iframe>
+        </div>
+      </aside>
+    </section>
+
+    <section id="attractions" class="cards-grid">
+      <!-- Cards inserted statically for offline-ready structure -->
+
+<article class="card" data-id="1" data-title="St. Stephen Protomartyr Church" data-type="church">
+  <img src="images/attr_1.svg" alt="St. Stephen Protomartyr Church">
+  <div class="card-body">
+    <h4>1. St. Stephen Protomartyr Church</h4>
+    <p class="short">Short description for St. Stephen Protomartyr Church — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="1">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/St.+Stephen+Protomartyr+Church">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="2" data-title="Fallen Sons of Ligao" data-type="monument">
+  <img src="images/attr_2.svg" alt="Fallen Sons of Ligao">
+  <div class="card-body">
+    <h4>2. Fallen Sons of Ligao</h4>
+    <p class="short">Short description for Fallen Sons of Ligao — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="2">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Fallen+Sons+of+Ligao">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="3" data-title="Divine Mercy Shrine and Monastery of the Carmelite Nuns of the Holy Trinity" data-type="shrine">
+  <img src="images/attr_3.svg" alt="Divine Mercy Shrine and Monastery of the Carmelite Nuns of the Holy Trinity">
+  <div class="card-body">
+    <h4>3. Divine Mercy Shrine and Monastery of the Carmelite Nuns of the Holy Trinity</h4>
+    <p class="short">Short description for Divine Mercy Shrine and Monastery of the Carmelite Nuns of the Holy Trinity — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="3">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Divine+Mercy+Shrine+and+Monastery+of+the+Carmelite+Nuns+of+the+Holy+Trinity">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="4" data-title="Bambusetum Park" data-type="park">
+  <img src="images/attr_4.svg" alt="Bambusetum Park">
+  <div class="card-body">
+    <h4>4. Bambusetum Park</h4>
+    <p class="short">Short description for Bambusetum Park — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="4">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Bambusetum+Park">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="5" data-title="Kawa-kawa Hill" data-type="hill">
+  <img src="images/attr_5.svg" alt="Kawa-kawa Hill">
+  <div class="card-body">
+    <h4>5. Kawa-kawa Hill</h4>
+    <p class="short">Short description for Kawa-kawa Hill — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="5">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Kawa-kawa+Hill">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="6" data-title="Ilah Nature Park" data-type="park">
+  <img src="images/attr_6.svg" alt="Ilah Nature Park">
+  <div class="card-body">
+    <h4>6. Ilah Nature Park</h4>
+    <p class="short">Short description for Ilah Nature Park — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="6">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Ilah+Nature+Park">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="7" data-title="Paayahayan sa Bulod" data-type="viewpoint">
+  <img src="images/attr_7.svg" alt="Paayahayan sa Bulod">
+  <div class="card-body">
+    <h4>7. Paayahayan sa Bulod</h4>
+    <p class="short">Short description for Paayahayan sa Bulod — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="7">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Paayahayan+sa+Bulod">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="8" data-title="Hobbit Hill" data-type="hill">
+  <img src="images/attr_8.svg" alt="Hobbit Hill">
+  <div class="card-body">
+    <h4>8. Hobbit Hill</h4>
+    <p class="short">Short description for Hobbit Hill — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="8">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Hobbit+Hill">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="9" data-title="Tigbao Highlands" data-type="highlands">
+  <img src="images/attr_9.svg" alt="Tigbao Highlands">
+  <div class="card-body">
+    <h4>9. Tigbao Highlands</h4>
+    <p class="short">Short description for Tigbao Highlands — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="9">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Tigbao+Highlands">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="10" data-title="Coco Farm Resort" data-type="resort">
+  <img src="images/attr_10.svg" alt="Coco Farm Resort">
+  <div class="card-body">
+    <h4>10. Coco Farm Resort</h4>
+    <p class="short">Short description for Coco Farm Resort — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="10">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Coco+Farm+Resort">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="11" data-title="Burok-burukan Hidden Spring Resort" data-type="resort">
+  <img src="images/attr_11.svg" alt="Burok-burukan Hidden Spring Resort">
+  <div class="card-body">
+    <h4>11. Burok-burukan Hidden Spring Resort</h4>
+    <p class="short">Short description for Burok-burukan Hidden Spring Resort — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="11">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Burok-burukan+Hidden+Spring+Resort">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="12" data-title="The Campsite — Mt. Masaraga" data-type="camping">
+  <img src="images/attr_12.svg" alt="The Campsite — Mt. Masaraga">
+  <div class="card-body">
+    <h4>12. The Campsite — Mt. Masaraga</h4>
+    <p class="short">Short description for The Campsite — Mt. Masaraga — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="12">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/The+Campsite+—+Mt.+Masaraga">Map</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-id="13" data-title="Ligao City Library" data-type="library">
+  <img src="images/attr_13.svg" alt="Ligao City Library">
+  <div class="card-body">
+    <h4>13. Ligao City Library</h4>
+    <p class="short">Short description for Ligao City Library — replace this with a richer local description.</p>
+    <div class="card-actions">
+      <button class="btn view" data-id="13">View</button>
+      <a class="btn ghost" target="_blank" href="https://www.google.com/maps/search/Ligao+City+Library">Map</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+
+    <section id="about" class="about">
+      <h3>About this guide</h3>
+      <p>This is a modern, minimalist single-page guide to Ligao City's attractions. The images in <code>/images</code> are placeholders — replace them with real photos (see <code>IMAGE_SOURCES.txt</code>) when ready.</p>
+      <p>If you want, to replace placeholders with the real images feel free bro.</p>
+    </section>
+  </main>
+  
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
